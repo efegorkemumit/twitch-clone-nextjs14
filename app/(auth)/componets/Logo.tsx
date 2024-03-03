@@ -6,14 +6,14 @@ const Logo = () => {
     <div className='flex flex-col items-center gap-4 '>
 
         <div className=' bg-white p-4 rounded-full '>
-        <Image src="/logo.svg" alt='' width="80" height="80"></Image>
+        <Image src="/logo2.svg" alt='' width="80" height="80"></Image>
 
         </div>
 
         <div className='flex flex-col items-center '>
             <p className='text-center text-xl font-semibold text-white'>Game +  </p>
 
-    <p className='text-center text-sm  text-white'>Let's go</p>
+    <p className='text-center text-sm  text-mycolor-300'>Let's go</p>
 
         </div>
 
