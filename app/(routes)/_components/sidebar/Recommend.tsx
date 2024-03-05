@@ -3,13 +3,13 @@
 import { useSidebar } from '@/store/use-sidebar';
 import { User } from '@prisma/client'
 import React from 'react'
-import UserItem from './UserItem';
+import { UserItem, UserItemSkeleton } from './UserItem';
 
 interface RecommendProps{
     data : User[];
 }
 
-const Recommend = ({data}:RecommendProps) => {
+export const Recommend = ({data}:RecommendProps) => {
 
     const {collapsed} = useSidebar((state)=>state)
     const showLabel = !collapsed && data.length>0
@@ -42,4 +42,20 @@ const Recommend = ({data}:RecommendProps) => {
   )
 }
 
-export default Recommend
+export const RecommendSkeleton=()=>{
+    return(
+
+        <ul className='space-y-4 px-4'>
+            {[...Array(5)].map((_,i)=>(
+                <UserItemSkeleton key={i}/>
+
+
+            ))}
+
+
+        </ul>
+
+
+    )
+
+}

@@ -2,11 +2,12 @@
 
 import Hint from '@/components/Hint'
 import { Button } from '@/components/ui/button'
+import { Skeleton } from '@/components/ui/skeleton'
 import { useSidebar } from '@/store/use-sidebar'
 import { ArrowLeftFromLine, ArrowRightFromLine } from 'lucide-react'
 import React from 'react'
 
-const Toggle = () => {
+export const Toggle = () => {
 
     const {collapsed, onCollapsed ,onExpand} =  useSidebar((state)=>state)
     const label = collapsed ? "Expand" : "Collapse"
@@ -54,4 +55,16 @@ const Toggle = () => {
   )
 }
 
-export default Toggle
+export const ToogleSkeleton = ()=>{
+
+  return(
+
+    <div className='p-3 pl-4 mb-2 flex items-center w-full'>
+
+    <Skeleton className='h-9 w-40'/>
+    <Skeleton className='h-9 w-7 ml-auto'/>
+
+    </div>
+    
+  )
+}

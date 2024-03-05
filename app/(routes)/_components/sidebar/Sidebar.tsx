@@ -1,11 +1,11 @@
 import React from 'react'
 import Wrapper from './Wrapper'
-import Toggle from './toggle'
 import { getRecommend } from '@/lib/recommend-service'
-import Recommend from './Recommend'
 import { useSidebar } from '@/store/use-sidebar'
+import { Recommend, RecommendSkeleton } from './Recommend'
+import { Toggle } from './toggle'
 
-const Sidebar = async() => {
+export const Sidebar = async() => {
 
   const recommend = await getRecommend();
 
@@ -23,4 +23,17 @@ const Sidebar = async() => {
   )
 }
 
-export default Sidebar
+export const SidebarSkeleton = ()=>{
+  return(
+    <aside
+    className="fixed left-0 
+    flex-col h-full w-60 bg-mycolor-200 
+    border-r-2 border-mycolor-400 z-50">
+      <RecommendSkeleton/>
+
+
+
+    </aside>
+  )
+}
+

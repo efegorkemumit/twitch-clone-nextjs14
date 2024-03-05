@@ -1,6 +1,7 @@
 'use client'
 import LiveBadge from '@/components/LiveBadge'
 import { Button } from '@/components/ui/button'
+import { Skeleton } from '@/components/ui/skeleton'
 import UserAvatar from '@/components/user-avatar'
 import { cn } from '@/lib/utils'
 import { useSidebar } from '@/store/use-sidebar'
@@ -15,7 +16,7 @@ interface UserItemProps{
     isLive? : boolean
 }
 
-const UserItem = ({imageUrl, username,isLive}:UserItemProps) => {
+export const UserItem = ({imageUrl, username,isLive}:UserItemProps) => {
   
     const pathname = usePathname();
 
@@ -62,4 +63,21 @@ const UserItem = ({imageUrl, username,isLive}:UserItemProps) => {
   )
 }
 
-export default UserItem
+
+export const UserItemSkeleton =()=>{
+
+    return(
+        <li className='flex items-center w-full gap-2'>
+        <Skeleton className='min-w-8 min-h-8 rounded-full'></Skeleton>
+        <div className='flex-1'>
+            <Skeleton className='h-6'/>
+
+        </div>
+
+
+    </li>
+    )
+   
+
+
+}
