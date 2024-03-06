@@ -24,8 +24,8 @@ const Container = ({children}:ContainerProps) => {
         }
     }, [matches, onCollapsed, onExpand])
   return (
-    <div className={cn("flex-1",
-    collapsed ? "ml-16": "ml-16 lg:ml-60")}>
+    <div className={cn("flex-1 mt-4",
+    collapsed ? "ml-20": "ml-20 lg:ml-64")}>
 
         {children}
     </div>
