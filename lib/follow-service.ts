@@ -55,6 +55,13 @@ export const followUser = async(id:string)=>{
     const exsitingFollow = await prismadb.follow.findFirst({
         where:{
             followerId : self.id,
+            following:{
+                blocking:{
+                    none:{
+                        blockedId:self.id
+                    }
+                }
+            },
             followingId:otherUser.id
         },
     });

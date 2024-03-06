@@ -38,6 +38,16 @@ export const getRecommend = async()=>{
                             }
                         }
                     }
+                },
+                {
+
+                    NOT:{
+                        blocking:{
+                            some:{
+                                blockedId:userId
+                            }
+                        }
+                    }
                 }
 
                ]
