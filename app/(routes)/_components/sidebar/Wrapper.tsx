@@ -6,6 +6,7 @@ import React from 'react'
 import { useIsClient } from 'usehooks-ts';
 import { ToogleSkeleton } from './toggle';
 import { RecommendSkeleton } from './Recommend';
+import { FollowingSkeleton } from './Following';
 
 
 interface WrapperProps{
@@ -25,6 +26,7 @@ const Wrapper = ({children}:WrapperProps) => {
 
 <ToogleSkeleton/>
 <RecommendSkeleton/>
+<FollowingSkeleton/>
 
         </aside>
 

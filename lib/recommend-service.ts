@@ -23,9 +23,24 @@ export const getRecommend = async()=>{
     if(userId){
         users = await prismadb.user.findMany({
             where:{
-                NOT:{
-                    id:userId
+               AND:[
+
+                {
+                    NOT:{
+                        id:userId
+                    }
+                },
+                {
+                    NOT:{
+                        followed:{
+                            some:{
+                                followerId:userId
+                            }
+                        }
+                    }
                 }
+
+               ]
             },
             orderBy:{
                 createdAt:"desc"
