@@ -31,7 +31,7 @@ export const UserItem = ({imageUrl, username,isLive}:UserItemProps) => {
     variant="link"
     className={cn("w-full h-12"  
     ,collapsed ? "justify-center": "justify-start",
-    IsActive && "bg-white" )}>
+    IsActive && "bg-mycolor-100" )}>
 
         <Link href={href}>
             <div className={cn("flex items-center w-full gap-2",
