@@ -22,6 +22,7 @@ export const Sidebar = async() => {
       <div>
 
         <Recommend data={recommend}/>
+        <div  className='h-3'></div>
         <Following data={following}/>
       </div>
     </Wrapper>

@@ -52,6 +52,9 @@ export const getRecommend = async()=>{
 
                ]
             },
+            include:{
+                stream:true
+            },
             orderBy:{
                 createdAt:"desc"
             }
