@@ -7,7 +7,7 @@ import { UserItem, UserItemSkeleton } from './UserItem';
 
 interface RecommendProps{
     data : (User & {
-        stream:Stream | null
+        stream : { isLive:boolean}| null
     });
 }
 
