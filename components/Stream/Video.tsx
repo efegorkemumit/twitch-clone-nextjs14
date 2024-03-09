@@ -28,12 +28,12 @@ const Video = ({hostIdentity,hostName}:VideoProps) => {
         content = <LoadingVideo label={connectionState}/>
     }
     else{
-        content = <LiveVideo />
+        content = <LiveVideo participant={participant} />
     }
 
 
   return (
-    <div>
+    <div className='aspect-video border border-mycolor-300 group'>
 
         {content}
     </div>
