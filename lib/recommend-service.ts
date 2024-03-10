@@ -56,6 +56,13 @@ export const getRecommend = async()=>{
                 stream :{
                     select:{
                         isLive:true,
+                        id:true,
+                        isChatDelayed:true,
+                        isChatEnabled:true,
+                        isChatFollowersOnly:true,
+                        name:true,
+                        thumbnailUrl:true,
+                        
                     }
                 }
             },

@@ -23,6 +23,8 @@ const StreamPlayer = ({isFollowing,stream,user}:StreamPlayerProps) => {
 
     const {collapsed} = useChatSidebar((state)=>state)
 
+    console.log(stream)
+
     if(!token ||  !name || !identity){
         return(
             <div>

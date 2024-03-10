@@ -12,6 +12,13 @@ export const getByUsername = async(username: string)=>{
             stream :{
                 select:{
                     isLive:true,
+                    id:true,
+                    isChatDelayed:true,
+                    isChatEnabled:true,
+                    isChatFollowersOnly:true,
+                    name:true,
+                    thumbnailUrl:true,
+                    
                 }
             }
         }
