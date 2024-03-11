@@ -22,7 +22,6 @@ isFollowing,isHidden,onChange,onSubmit,value,isChatEnabled}:ChatFormProps) => {
 const [isDelayblocked, setIsdelayBlocked] =useState(false);
 
     const isControl = isFollowersOnly && !isFollowing;
-    console.log(`isControl ${isControl}`)
 
     const IsDisabled = isControl || isDelayblocked || !isChatEnabled
 

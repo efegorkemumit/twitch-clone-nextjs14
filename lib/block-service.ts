@@ -17,7 +17,7 @@ export const isBlockedByUser = async(id:string)=>{
         }
 
         if(otherUser.id === self.id){
-            return true;
+            return false;
         }
 
         const exitingBlock = await prismadb.block.findUnique({

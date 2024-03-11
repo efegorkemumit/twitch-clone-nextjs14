@@ -25,7 +25,10 @@ export const useViwerToken= (hostIdentity:string)=>{
 
                 const decodedToken = jwtDecode(viewerToken) as JwtPayload & {name?:string}
                 const name = decodedToken?.name;
-                const identity = decodedToken.exp;
+                const identity = decodedToken.sub;
+
+                console.log(identity)
+                console.log(decodedToken)
 
                 if(identity){
                     setIdentity(identity);

@@ -35,8 +35,6 @@ isChatEnabled,isChatFollowersOnly,isFollowing,viewerName}:ChatProps) => {
 
   const isHidden = !isChatEnabled || !isOnline
 
-  console.log(`isOnline ${isOnline}`)
-  console.log(`isHidden ${isHidden}`)
 
 
  
@@ -71,7 +69,7 @@ isChatEnabled,isChatFollowersOnly,isFollowing,viewerName}:ChatProps) => {
   }, [matches, onExpand])
 
   return (
-    <div className='flex flex-col bg-mycolor-200 border-1 border-b pt-0 ml-5 h-screen'>
+    <div className='flex flex-col bg-mycolor-200 border-1 border-b pt-0 ml-5 h-[87vh]'>
         <ChatHeader/>
 
         {variant === ChatVariant.CHAT &&(
@@ -115,7 +113,7 @@ isChatEnabled,isChatFollowersOnly,isFollowing,viewerName}:ChatProps) => {
 export const ChatSkeleton = ()=>{
   return(
 
-    <div className='flex flex-col bg-mycolor-200 border-1 border-b pt-0 ml-5 h-screen'>
+    <div className='flex flex-col bg-mycolor-200 border-1 border-b pt-0 ml-5 h-[87vh]'>
 
       <Skeleton className='h-full w-full rounded-md'/>
     </div>

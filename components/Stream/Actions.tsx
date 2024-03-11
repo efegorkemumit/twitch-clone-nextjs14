@@ -61,7 +61,7 @@ const Actions = ({hostIdentity,isFollowing,isHost}:ActionProps) => {
 
   return (
     <Button 
-    disabled={isPending}
+    disabled={isPending || isHost}
     onClick={toggleFollow}
     variant="myButton">
 

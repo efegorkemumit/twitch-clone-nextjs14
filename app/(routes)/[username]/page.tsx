@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation'
 import React from 'react'
 import Actions from './_components/actions'
 import { isBlockedByUser } from '@/lib/block-service'
+import { StreamPlayer } from '@/components/Stream/StreamPlayer'
 
 interface UserPageProps{
     params :{
@@ -26,13 +27,11 @@ const UserPage = async({params}:UserPageProps) => {
 
   return (
     <div className='flex flex-col gap-2 text-mycolor-500'>
-        <p>username : {user.username}</p>
-        <p>id : {user.id}</p>
-        <p>is Following : {`${isfollowing}`}</p>
-        <p>is Block : {`${isBlock}`}</p>
-
-        <Actions isFollowing={isfollowing} userId={user.id}/>
-
+       <StreamPlayer
+       isFollowing={isfollowing}
+       stream={user.stream}
+       user={user}
+       />
 
         
     </div>
