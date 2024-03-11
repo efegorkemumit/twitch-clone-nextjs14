@@ -65,7 +65,7 @@ const Actions = ({hostIdentity,isFollowing,isHost}:ActionProps) => {
     onClick={toggleFollow}
     variant="myButton">
 
-        {isFollowing ? "Unfollow" : "Follow"}
+        {isFollowing ? "Follow" : "Unfollow"}
 
 
     </Button>
