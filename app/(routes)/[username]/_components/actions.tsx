@@ -62,7 +62,7 @@ const Actions = ({isFollowing, userId}:ActionProps) => {
     disabled={isPending}
     onClick={onClick}>
 
-        {isFollowing ? "Follow" : "UnFollow"}
+        {isFollowing ? "Unfollow" : "Follow"}
 
 
     </Button>
