@@ -6,6 +6,7 @@ import { useChat, useConnectionState, useRemoteParticipant } from '@livekit/comp
 import { ConnectionState } from 'livekit-client';
 import ChatForm from './ChatForm';
 import ChatList from './ChatList';
+import ChatComunity from './ChatComunity';
 
 interface ChatProps{
     hostName :string;
@@ -97,7 +98,11 @@ isChatEnabled,isChatFollowersOnly,isFollowing,viewerName}:ChatProps) => {
         {variant === ChatVariant.COMMUNITY &&(
 
         <>
-        comut
+        <ChatComunity
+          hostName={hostName}
+          isHidden={isHidden}
+          viewerName={viewerName}
+        />
         </>
         )}
 
