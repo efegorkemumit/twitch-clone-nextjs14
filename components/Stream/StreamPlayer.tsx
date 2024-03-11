@@ -10,6 +10,7 @@ import ChatToogle from './ChatToogle';
 import { Video, VideoSkeleton } from './Video';
 import { Chat, ChatSkeleton } from './Chat';
 import Header from './Header';
+import InfoCard from './InfoCard';
 
 
 interface StreamPlayerProps{
@@ -60,6 +61,14 @@ export const StreamPlayer = ({isFollowing,stream,user}:StreamPlayerProps) => {
                 
                 
 
+                />
+
+                <InfoCard
+                hostIdentity={user.id}
+                name={stream.name}
+                thumnailUrl={stream.thumbnailUrl}
+                viewerIdentity={identity}
+                
                 />
             </div>
 

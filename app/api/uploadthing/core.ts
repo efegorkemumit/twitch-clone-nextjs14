@@ -1,0 +1,42 @@
+import { getSelf } from "@/lib/auth-service";
+import { prismadb } from "@/lib/prismadb";
+import { createUploadthing, type FileRouter } from "uploadthing/next";
+import { UploadThingError } from "uploadthing/server";
+ 
+const f = createUploadthing();
+
+export const ourFileRouter = {
+
+    thumbnailUploader:f({
+        image:{
+            maxFileCount:1,
+            maxFileSize:"4MB"
+        }
+    })
+    .middleware((async()=>{
+        const self = await getSelf();
+
+        return{user:self}
+
+    }))
+    .onUploadComplete(async({metadata,file})=>{
+        await prismadb.stream.update({
+            where:{
+                userId:metadata.user.id
+            },
+            data:{
+                thumbnailUrl:file.url
+            }
+
+
+        });
+
+        return {fileUrl: file.url}
+    })
+   
+
+
+  } satisfies FileRouter;
+   
+  export type OurFileRouter = typeof ourFileRouter;
+  
