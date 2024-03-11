@@ -20,6 +20,11 @@ export const getByUsername = async(username: string)=>{
                     thumbnailUrl:true,
                     
                 }
+            },
+            _count:{
+                select:{
+                    followed:true
+                }
             }
         }
     })
