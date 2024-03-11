@@ -4,6 +4,7 @@ import React from 'react'
 import OfflineVideo from './OfflineVideo';
 import LoadingVideo from './LoadingVideo';
 import LiveVideo from './LiveVideo';
+import { Skeleton } from '../ui/skeleton';
 
 
 interface VideoProps{
@@ -11,7 +12,7 @@ interface VideoProps{
     hostIdentity: string;
 }
 
-const Video = ({hostIdentity,hostName}:VideoProps) => {
+export const Video = ({hostIdentity,hostName}:VideoProps) => {
 
     const connectionState = useConnectionState();
     const participant = useRemoteParticipant(hostIdentity);
@@ -40,4 +41,13 @@ const Video = ({hostIdentity,hostName}:VideoProps) => {
   )
 }
 
-export default Video
+
+export const VideoSkeleton = ()=>{
+  return(
+
+    <div className='aspect-video border border-mycolor-300'>
+
+      <Skeleton className='h-full w-full rounded-md'/>
+    </div>
+  )
+}

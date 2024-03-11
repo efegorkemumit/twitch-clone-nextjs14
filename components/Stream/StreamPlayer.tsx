@@ -5,10 +5,10 @@ import { Stream, User } from '@prisma/client'
 import React from 'react'
 import { LiveKitRoom } from "@livekit/components-react";
 import { cn } from '@/lib/utils';
-import Video from './Video';
 import { useChatSidebar } from '@/store/use-chat-sidebar';
 import ChatToogle from './ChatToogle';
-import Chat from './Chat';
+import { Video, VideoSkeleton } from './Video';
+import { Chat, ChatSkeleton } from './Chat';
 
 
 interface StreamPlayerProps{
@@ -17,7 +17,7 @@ interface StreamPlayerProps{
     isFollowing : boolean
 }
 
-const StreamPlayer = ({isFollowing,stream,user}:StreamPlayerProps) => {
+export const StreamPlayer = ({isFollowing,stream,user}:StreamPlayerProps) => {
 
     const {identity,name,token} = useViwerToken(user.id)
 
@@ -28,7 +28,7 @@ const StreamPlayer = ({isFollowing,stream,user}:StreamPlayerProps) => {
     if(!token ||  !name || !identity){
         return(
             <div>
-                Cannot watch
+               <StraemSkeleton/>
             </div>
         )
     }
@@ -74,4 +74,22 @@ const StreamPlayer = ({isFollowing,stream,user}:StreamPlayerProps) => {
   )
 }
 
-export default StreamPlayer
+export const StraemSkeleton = ()=>{
+    return(
+  
+      <div className='grid grid-cols-1 lg:grid-cols-3 2xl:grid-cols-7'>
+
+            <div className='col-span-1 lg:col-span-2 2xl:col-span-5'>
+                <VideoSkeleton/>
+
+            </div>
+
+            <div className="col-span-1 2xl:col-span-2">
+
+                <ChatSkeleton/>
+  
+
+                </div>
+      </div>
+    )
+  }

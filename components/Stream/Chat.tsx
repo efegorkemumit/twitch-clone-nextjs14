@@ -7,6 +7,7 @@ import { ConnectionState } from 'livekit-client';
 import ChatForm from './ChatForm';
 import ChatList from './ChatList';
 import ChatComunity from './ChatComunity';
+import { Skeleton } from '../ui/skeleton';
 
 interface ChatProps{
     hostName :string;
@@ -19,7 +20,7 @@ interface ChatProps{
 
 }
 
-const Chat = ({hostIdentity,hostName,isChatDelayed,
+export const Chat = ({hostIdentity,hostName,isChatDelayed,
 isChatEnabled,isChatFollowersOnly,isFollowing,viewerName}:ChatProps) => {
 
   const {variant , onExpand} = useChatSidebar((state)=>state);
@@ -70,7 +71,7 @@ isChatEnabled,isChatFollowersOnly,isFollowing,viewerName}:ChatProps) => {
   }, [matches, onExpand])
 
   return (
-    <div className='flex flex-col bg-mycolor-200 border-1 border-b pt-0 h-[480px]'>
+    <div className='flex flex-col bg-mycolor-200 border-1 border-b pt-0 ml-5 h-screen'>
         <ChatHeader/>
 
         {variant === ChatVariant.CHAT &&(
@@ -111,4 +112,12 @@ isChatEnabled,isChatFollowersOnly,isFollowing,viewerName}:ChatProps) => {
   )
 }
 
-export default Chat
+export const ChatSkeleton = ()=>{
+  return(
+
+    <div className='flex flex-col bg-mycolor-200 border-1 border-b pt-0 ml-5 h-screen'>
+
+      <Skeleton className='h-full w-full rounded-md'/>
+    </div>
+  )
+}
