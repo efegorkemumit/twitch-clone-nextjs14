@@ -23,6 +23,10 @@ const UserPage = async({params}:UserPageProps) => {
     const isfollowing= await isFollowingUser(user.id)
     const isBlock= await isBlockedByUser(user.id)
 
+    if(isBlock){
+      notFound();
+    }
+
 
 
   return (

@@ -13,7 +13,7 @@ const ChatMessage = ({data}:ChatMessage) => {
 
     const color = StringToColor(data.from?.name || "");
   return (
-    <div className='flex gap-2 p-2 rounded-md hover:bg-white'>
+    <div className='flex gap-2 p-2 rounded-md'>
         <p className='text-sm text-white'>
             {format(data.timestamp, "HH:MM")}
 

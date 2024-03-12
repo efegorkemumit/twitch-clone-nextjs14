@@ -23,7 +23,7 @@ const [isDelayblocked, setIsdelayBlocked] =useState(false);
 
     const isControl = isFollowersOnly && !isFollowing;
 
-    const IsDisabled = isControl || isDelayblocked || !isChatEnabled
+    const IsDisabled = isControl || isDelayblocked || isHidden
 
     if(isHidden){
         return null
@@ -57,7 +57,7 @@ const [isDelayblocked, setIsdelayBlocked] =useState(false);
             <Input onChange={(e)=>onChange(e.target.value)}
             value={value} disabled={IsDisabled}
             placeholder='Send a message'
-            className='border-white'>
+            className='border-white text-mycolor-400'>
             </Input>
         </div>
 
