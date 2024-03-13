@@ -75,6 +75,20 @@ export const getRecommend = async()=>{
     else{
 
         users = await prismadb.user.findMany({
+            include:{
+                stream :{
+                    select:{
+                        isLive:true,
+                        id:true,
+                        isChatDelayed:true,
+                        isChatEnabled:true,
+                        isChatFollowersOnly:true,
+                        name:true,
+                        thumbnailUrl:true,
+                        
+                    }
+                }
+            },
            
             orderBy:{
                 createdAt:"desc"
