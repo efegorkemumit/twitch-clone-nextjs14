@@ -36,7 +36,7 @@ Video Tutorial : Part 2:  02.04.2024   18:00 da yayında
 
 
 
-Twitch Clone  Part 1 | Full Stack  | React NextJs  Prisma Livekit, Mysql, Tailwindcss, Prisma Clerk
+##  Twitch Clone  Part 1 | Full Stack  | React NextJs  Prisma Livekit, Mysql, Tailwindcss, Prisma Clerk
 
 ## Video  Part -  1
 
@@ -63,6 +63,11 @@ Twitch Clone  Part 1 | Full Stack  | React NextJs  Prisma Livekit, Mysql, Tailwi
 - 06:43:08 Obs
 - 06:47:09 Webhooks Livekit
 - 06:58:24 Viewer
+
+
+##  Twitch Clone  Part 2 | Full Stack  | React NextJs  Prisma Livekit, Mysql, Tailwindcss, Prisma Clerk
+
+
 
 ## Video  Part -  2
 
@@ -94,14 +99,15 @@ Twitch Clone  Part 1 | Full Stack  | React NextJs  Prisma Livekit, Mysql, Tailwi
 - **Profil Kişiselleştirme**: Kullanıcılar bio, kullanıcı adı ve diğer profil detaylarını güncelleyebilir.
 
 ## Implemented Features
-Authentication: Clerk is integrated for user authentication.
-Live Streaming: Live video streaming functionality is implemented using Livekit.
-Chat: Real-time chat feature for users.
-Community: Users can join various communities and interact.
-Dark Mode: Support for dark theme is added.
-Loading Indicator: Loading screens are implemented to enhance user experience.
-Search: Users can search for streams and communities.
-Profile Customization: Users can update their bio, username, and other profile details.
+
+- **Authentication**: Clerk, kullanıcı kimlik doğrulaması için entegre edilmiştir.
+- **Live Streaming**: Livekit kullanılarak canlı video yayını işlevselliği uygulanmıştır.
+- **Chat**: Kullanıcılar için gerçek zamanlı sohbet özelliği mevcuttur.
+- **Community**: Kullanıcılar çeşitli topluluklara katılabilir ve etkileşimde bulunabilir.
+- **Dark Mode**: Koyu tema desteği eklenmiştir.
+- **Loading Indicator**: Kullanıcı deneyimini artırmak için yükleme ekranları uygulanmıştır.
+- **Search**: Kullanıcılar yayınları ve toplulukları arayabilir.
+- **Profile Customization**: Kullanıcılar bio, kullanıcı adı ve diğer profil detaylarını güncelleyebilir.
 
 
 
