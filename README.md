@@ -43,8 +43,8 @@ Twitch Clone  Part 1 | Full Stack  | React NextJs  Prisma Livekit, Mysql, Tailwi
 
 
 Timestamps
-00:00 Tanıtım
-05.02 Kurulumlar
+-00:00 Tanıtım
+-05.02 Kurulumlar
 17:35 Clerk
 31:26 Dark Mode
 44:28 Prisma DB
